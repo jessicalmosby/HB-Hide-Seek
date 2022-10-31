@@ -43,3 +43,15 @@ function handleGuess(correctSpot, userGuess) {
     // then if the user guess is correct, increment the correct guesses
     // update the DOM to show this change to the user (including the losses, not tracked directly in state)
 }
+
+function reset() {
+    tree.classList.remove('reveal');
+    boulder.classList.remove('reveal');
+    shed.classList.remove('reveal');
+}
+
+function displayResults() {
+    winsEl.textContent = wins;
+    lossesEl.textContent = total - wins;
+    totalEl.textContent = total;
+}
